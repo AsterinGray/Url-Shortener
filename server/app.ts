@@ -7,7 +7,7 @@ import routes from './app/routes'
 
 const app = express()
 
-mongoose.connect(MONGODB_URI)
+mongoose.connect(`${MONGODB_URI}`)
 
 const db = mongoose.connection
 db.on('error', (err) => console.error(err))
